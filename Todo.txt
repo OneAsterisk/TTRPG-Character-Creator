@@ -1,0 +1,8 @@
+    <!-- 
+        TODO:
+        Create JS files to populate races, classes, subclasses, all of that stuff along with their attributes and etc
+        Make the website look pretty with css
+        Get more basic stuff laid out
+        Implement dice rolling system (probably will just be random numbers for now as physics would be more difficult to implment as one person)
+        Add separate headers and such to better organize the website(ie, race picker, class, levels, abilities and stuff)
+    -->
