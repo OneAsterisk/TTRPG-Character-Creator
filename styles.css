@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Custom Fonts for the AppShell */
 @font-face {
-    font-family: ;
+    font-family: sans-serif;
     src: url("https://www.dndbeyond.com/fonts/tiamatcondensedsc-regular-webfont.woff2") format("woff2");
 }
 body {

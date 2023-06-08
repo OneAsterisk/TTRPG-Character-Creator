@@ -13,6 +13,7 @@
         <link href="styles.css" rel="stylesheet"/>
         <link href="images/d20.png" rel="shortcut icon">
         <title>TTRPG Character Creator</title> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body id="site" class="site body-rpgcharacterbuilder">
         <main>
@@ -23,27 +24,12 @@
                 <h2>Character Name</h2>
                 <input type="text" id="character-name" />
                 <h2>Race</h2>
-                <select id="race">
-                  <option value="Human">Human</option>
-                  <option value="Dwarf">Dwarf</option>
-                  <option value="Elf">Elf</option>
-                  <option value="Halfling">Halfling</option>
-                  <option value="Gnome">Gnome</option>
-                  <option value="Dragonborn">Dragonborn</option>
-                  <option value="Half-Elf">Half-Elf</option>
-                  <option value="Half-Orc">Half-Orc</option>
+                <script defer src="races.mjs"></script>
+                <select id="race-select">
+                    <option value="0">Select</option>
                 </select>
                 <h2>Class</h2>
                 <select id="class">
-                  <option value="Bard">Bard</option>
-                  <option value="Cleric">Cleric</option>
-                  <option value="Fighter">Fighter</option>
-                  <option value="Monk">Monk</option>
-                  <option value="Paladin">Paladin</option>
-                  <option value="Ranger">Ranger</option>
-                  <option value="Sorcerer">Sorcerer</option>
-                  <option value="Warlock">Warlock</option>
-                  <option value="Wizard">Wizard</option>
                 </select>
                 </div>
         </main>
