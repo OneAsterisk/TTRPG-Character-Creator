@@ -15,23 +15,69 @@
         <title>TTRPG Character Creator</title> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
-    <body id="site" class="site body-rpgcharacterbuilder">
+    <body id="site" class="body-character-builder">
         <main>
-            <h1>Character Creation Method</h1>
-            <p>Est. 2023</p>
-            <h3>Choose how you would like to create your character</h3>
-            <div id="character-builder">
-                <h2>Character Name</h2>
-                <input type="text" id="character-name" />
-                <h2>Race</h2>
-                <script defer src="races.mjs"></script>
-                <select id="race-select">
-                    <option value="0">Select</option>
-                </select>
-                <h2>Class</h2>
-                <select id="class">
-                </select>
+            <div class="inner-character-builder">
+                <div class="builder-main">
+                    <div class="name-naming-portrait">
+                        <label class="builder-field-heading" for="builder-character-naming">Character Name</label>
+                        <div class="builder-naming-field-text"><input type="text" name="builder-character-naming" placeholder="Character 1" required></div>
+                        
+                    </div>
+                    <div class="character-preferences">
+                        <h2 class="builder-heading-2">Character Preferences</h2>
+                    </div>
+                    <div class="manage-preferences">
+                        <div class="preferences-toggles">
+                            <div class="preferences-toggles-summary">
+                                <div class="preferences-toggles-heading">Sources</div>
+                                <div class="preferences-toggles-description">Choose which sources are available for this character.</div>
+                            </div>
+                            <div class="preferences-field-toggles-fields">
+                                <div class="preferences-field-toggles-fields-input">
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="PHB" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="PHB" name="books"><label for="PHB" checked>The Player's Handbook</label> 
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="DMG" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="DMG" name="books"><label for="DMG">Dungeon Master's Guide</label>
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="MOTM" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="MOTM" name="books"><label for="MTOM">Mordenkainen Presents: Monsters of the Multiverse</label>
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="SOTDQ" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="SOTDQ" name="books"><label for="SOTDQ">Dragonlance: Shadow of the Dragon Queen</label>
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="SJAS" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="SJAS" name="books"><label for="SJAS">Dragonlance: Shadow of the Dragon Queen</label>
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="MOT" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="MOT" name="books"><label for="MOT">Mythic Odysseys of Theros</label>
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="RFTLW" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="RFTLW" name="books"><label for="RFTLW">Eberron: Rising from the Last War</label>
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="AI" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="AI" name="books"><label for="AI">Acquisitions Incorporated</label>
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="GGTR" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="GGTR" name="books"><label for="GGTR">Guildmasters' Guide to Ravnica</label>
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="SCAG" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="SCAG" name="books"><label for="SCAG">Sword Coast Adventurer's Guide</label>
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="LR" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="LR" name="books"><label for="LR">Locathah Rising</label>
+                                    </div>
+                                    <div class="ttrpg-builder-toggle-field">
+                                        <input id="OGA" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="OGA" name="books"><label for="OGA">One Grung Above</label>
+                                    </div>
+                                </div>
+                            </div>     
+                    </div>
+
+                    </div>
                 </div>
+            </div>
         </main>
     </body>
 </html>

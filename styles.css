@@ -1,10 +1,34 @@
 @charset "UTF-8";
 /* Custom Fonts for the AppShell */
 @font-face {
-    font-family: sans-serif;
+    font-family: 'Arial Narrow Bold', sans-serif;;
     src: url("https://www.dndbeyond.com/fonts/tiamatcondensedsc-regular-webfont.woff2") format("woff2");
 }
-body {
-    font-family: sans-serif;
-    background-color: rgb(46, 47, 48);
+.body-character-builder {
+    background:  url("images/background-3.1.png") no-repeat fixed center 0px, #f2f0ea 5px !important;
 }
+.inner-character-builder {
+    margin: 0 auto;
+    max-width: 680px;
+    padding-top: 5px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.preferences-toggles-summary {
+    font-family: 'Arial Narrow Bold', sans-serif;
+}
+
+.preferences-toggles-heading {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.preferences-toggles-description {
+    font-size: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(92, 88, 88, 0.5);
+}
+.ttrpg-builder-toggle-field {
+    padding: 5px 0px;
+}
+
