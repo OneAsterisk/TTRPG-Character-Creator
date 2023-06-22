@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- 
+  <!-- 
         TODO:
         Create JS files to populate races, classes, subclasses, all of that stuff along with their attributes and etc
         Make the website look pretty with css
@@ -8,86 +8,187 @@
         Implement dice rolling system (probably will just be random numbers for now as physics would be more difficult to implment as one person)
         Add separate headers and such to better organize the website(ie, race picker, class, levels, abilities and stuff)
     -->
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="styles.css" rel="stylesheet"/>
-        <link href="images/d20.png" rel="shortcut icon">
-        <title>TTRPG Character Creator</title> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    </head>
-    <body id="site" class="body-character-builder">
-        <main>
-            <div class="inner-character-builder">
-                <div class="builder-main">
-                    <div class="name-naming-portrait">
-                        <label class="builder-field-heading" for="builder-character-naming">Character Name</label>
-                        <div class="builder-naming-field-text"><input type="text" name="builder-character-naming" placeholder="Character 1" required></div>
-                        
-                    </div>
-                    <div class="character-preferences">
-                        <h2 class="builder-heading-2">Character Preferences</h2>
-                    </div>
-                    <div class="manage-preferences">
-                        <div class="preferences-toggles">
-                            <div class="preferences-toggles-summary">
-                                <div class="preferences-toggles-heading">Sources</div>
-                                <div class="preferences-toggles-description">Choose which sources are available for this character.</div>
-                            </div>
-                            <div class="preferences-field-toggles-fields">
-                                <div class="preferences-field-toggles-fields-input">
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="PHB" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="PHB" name="books"><label for="PHB" checked>The Player's Handbook</label> 
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="DMG" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="DMG" name="books"><label for="DMG">Dungeon Master's Guide</label>
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="MOTM" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="MOTM" name="books"><label for="MTOM">Mordenkainen Presents: Monsters of the Multiverse</label>
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="SOTDQ" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="SOTDQ" name="books"><label for="SOTDQ">Dragonlance: Shadow of the Dragon Queen</label>
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="SJAS" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="SJAS" name="books"><label for="SJAS">Dragonlance: Shadow of the Dragon Queen</label>
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="MOT" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="MOT" name="books"><label for="MOT">Mythic Odysseys of Theros</label>
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="RFTLW" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="RFTLW" name="books"><label for="RFTLW">Eberron: Rising from the Last War</label>
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="AI" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="AI" name="books"><label for="AI">Acquisitions Incorporated</label>
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="GGTR" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="GGTR" name="books"><label for="GGTR">Guildmasters' Guide to Ravnica</label>
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="SCAG" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="SCAG" name="books"><label for="SCAG">Sword Coast Adventurer's Guide</label>
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="LR" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="LR" name="books"><label for="LR">Locathah Rising</label>
-                                    </div>
-                                    <div class="ttrpg-builder-toggle-field">
-                                        <input id="OGA" class="ttrpg-builder-toggle-field-checkbox" type="checkbox" value="OGA" name="books"><label for="OGA">One Grung Above</label>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div class="preferences-toggles-summary">
-                                <div class="preferences-toggles-heading">Optional Features</div>
-                                <div class="preferences-toggles-description">Allow optional features for your character.</div>
-                            </div>    
-                    </div>
-                    </div>
-                    <!-- Footer -->
-                    <footer>
-                        <div class="legal-footer-stuff">
-                            <p>This site is based on the 5e SRD-OGL 5.1 - Wizards of the Coast, Dungeons & Dragons, D&D, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. © 2022 Wizards. All Rights Reserved.</p>
-                        </div>
-                    </footer>
-                    <!-- End Footer -->
-                </div>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="images/d20.png" rel="shortcut icon" />
+    <title>TTRPG Character Creator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body id="site" class="body-character-builder">
+    <main>
+      <div class="builder-main-header">
+        <a href="index.html" class="builder-main-links">Main</a>
+        <a href="race.html" class="builder-main-links">Race</a>
+      </div>
+      <div class="inner-character-builder">
+        <div class="builder-main">
+          <div class="name-naming-portrait">
+            <label class="builder-field-heading" for="builder-character-naming"
+              >Character Name</label
+            >
+            <div class="builder-naming-field-text">
+              <input
+                type="text"
+                name="builder-character-naming"
+                placeholder="Character 1"
+                required
+              />
             </div>
-        </main>
-    </body>
+          </div>
+          <div class="character-preferences">
+            <h2 class="builder-heading-2">Character Preferences</h2>
+          </div>
+          <div class="manage-preferences">
+            <div class="preferences-toggles">
+              <div class="preferences-toggles-summary">
+                <div class="preferences-toggles-heading">Sources</div>
+                <div class="preferences-toggles-description">
+                  Choose which sources are available for this character.
+                </div>
+              </div>
+              <div class="preferences-field-toggles-fields">
+                <div class="preferences-field-toggles-fields-input">
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="PHB"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="PHB"
+                      name="books"
+                    /><label for="PHB" checked>The Player's Handbook</label>
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="DMG"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="DMG"
+                      name="books"
+                    /><label for="DMG">Dungeon Master's Guide</label>
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="MOTM"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="MOTM"
+                      name="books"
+                    /><label for="MTOM"
+                      >Mordenkainen Presents: Monsters of the Multiverse</label
+                    >
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="SOTDQ"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="SOTDQ"
+                      name="books"
+                    /><label for="SOTDQ"
+                      >Dragonlance: Shadow of the Dragon Queen</label
+                    >
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="SJAS"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="SJAS"
+                      name="books"
+                    /><label for="SJAS"
+                      >Dragonlance: Shadow of the Dragon Queen</label
+                    >
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="MOT"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="MOT"
+                      name="books"
+                    /><label for="MOT">Mythic Odysseys of Theros</label>
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="RFTLW"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="RFTLW"
+                      name="books"
+                    /><label for="RFTLW"
+                      >Eberron: Rising from the Last War</label
+                    >
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="AI"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="AI"
+                      name="books"
+                    /><label for="AI">Acquisitions Incorporated</label>
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="GGTR"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="GGTR"
+                      name="books"
+                    /><label for="GGTR">Guildmasters' Guide to Ravnica</label>
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="SCAG"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="SCAG"
+                      name="books"
+                    /><label for="SCAG">Sword Coast Adventurer's Guide</label>
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="LR"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="LR"
+                      name="books"
+                    /><label for="LR">Locathah Rising</label>
+                  </div>
+                  <div class="ttrpg-builder-toggle-field">
+                    <input
+                      id="OGA"
+                      class="ttrpg-builder-toggle-field-checkbox"
+                      type="checkbox"
+                      value="OGA"
+                      name="books"
+                    /><label for="OGA">One Grung Above</label>
+                  </div>
+                </div>
+              </div>
+              <div class="preferences-toggles-summary">
+                <div class="preferences-toggles-heading">Optional Features</div>
+                <div class="preferences-toggles-description">
+                  Allow optional features for your character.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Footer -->
+          <footer>
+            <div class="legal-footer-stuff">
+              <p>
+                This site is based on the 5e SRD-OGL 5.1 - Wizards of the Coast,
+                Dungeons & Dragons, D&D, and their logos are trademarks of
+                Wizards of the Coast LLC in the United States and other
+                countries. © 2022 Wizards. All Rights Reserved.
+              </p>
+            </div>
+          </footer>
+          <!-- End Footer -->
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
